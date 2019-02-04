@@ -63,3 +63,14 @@ markdownファイルをつくるうえで気にしないといけないのは「
 
 CSSとかを工夫する場合は移植が大変そうですが...
 (私はそこらへんは出来合いのものを使っていくスタイルなので気にしません)
+
+
+## 注意点
+githubにあげるとき，themeをgithubから引っ張ってきていたらちょっと複雑なことになるので，themeのgitを外します．
+rm -rf themes/{name of theme}/.git
+
+
+## 参考
+
+https://blog.mismithportfolio.com/web/hugo-netlify-build
+
