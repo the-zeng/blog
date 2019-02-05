@@ -1,63 +1,33 @@
-baseURL = "https://thezenglog.netlify.com/"
-languageCode = "ja"
-defaultContentLanguage = "ja"
+baseURL = "/"
 
-title = "the-zeng Log"
-theme = "hugo-theme-learn"
-# themesdir = "../.."
-metaDataFormat = "yaml"
-defaultContentLanguageInSubdir= true
+languageCode = "ja"
+DefaultContentLanguage = "ja"
+title = "The zeng log"
+theme = "hugo-theme-docdock"
+#themesdir = "../.."
+
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+#pygmentsStyle = "monokailight"
+#pygmentsStyle = "monokai"
+
+defaultContentLanguage = "ja"
+defaultContentLanguageInSubdir= false
+#enableMissingTranslationPlaceholders = false
+
 
 [params]
-  #editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
-  description = "the zeng log"
-  author = "the zeng"
-  showVisitedLinks = true
-  disableBreadcrumb = false
-  disableNextPrev = false
-  themeVariant = "blue"
+themeStyle = "original"
+#themeVariant = "blue"
+themeVariant = "gray"
+showVisitedLinks = false
+#disableHomeIcon = true
+#disableSearch = true
+
+highlightClientSide = false
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
-
-[taxonomies]
-#author = "authors"
-
-[permalinks]
-#InformationTechnology = "/:filename/"
-
-
-[Languages]
-
-# Japanese
-[Languages.ja]
-title = "坐禅Log"
-weight = 1
-languageName = "Japanese"
-
-[[Languages.ja.menu.shortcuts]]
-name = "<i class='fab fa-fw fa-github'></i> Github repo"
-identifier = "ds"
-url = "https://thezenglog.netlify.com/"
-weight = 10
-
-[[Languages.ja.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-camera'></i> Showcases"
-url = "showcase"
-weight = 11
-
-[[Languages.ja.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
-identifier = "hugodoc"
-url = "https://gohugo.io/"
-weight = 20
-
-[[Languages.ja.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
-url = "/credits"
-weight = 30
-
-
-
-
 

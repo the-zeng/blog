@@ -1,0 +1,62 @@
+
+:root{
+    --SIDE-MAIN-color:rgb(37, 37, 37);
+    --SIDE-HEAD-color: #397dfb;
+    --SIDE-MAIN-TXT-color:white;
+    --MAIN-HOVER-color:#397dfb;
+    --SIDE-FOCUS-BACK-color:black;
+    --SIDE-FOCUS-FORE-color:#397dfb;
+    --MENU-LINK-color:#7caaff;
+    --MENU-ACTIVE-BACK-color:#397dfb;
+    --MENU-ACTIVE-LINK-color:black;
+    
+}
+a, #sidebar ul li.visited > a .read-icon {
+	color: var(--SIDE-MAIN-color);
+}
+a:hover {
+    color: var(--MAIN-HOVER-color);
+}
+#body a.highlight:after {
+    background-color: var(--MAIN-HOVER-color);
+}
+#sidebar {
+	background-color: var(--SIDE-MAIN-color);
+}
+#sidebar #header-wrapper {
+    background: var(--SIDE-HEAD-color);
+    color: var(--BF-color)
+    border-color: var(--SIDE-FOCUS-BACK-color);
+}
+#sidebar .searchbox {
+	border-color: var(--SIDE-MAIN-TXT-color);
+    background: var(--SIDE-MAIN-TXT-color);
+}
+#sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
+    background: var(--SIDE-FOCUS-BACK-color);
+}
+#sidebar .searchbox * {
+    color: var(--SIDE-MAIN-color);
+}
+#sidebar a , #sidebar a:hover {
+    color: var(--SIDE-MAIN-TXT-color);
+}
+#sidebar .parent li, #sidebar .active li {
+    border-color: var(--MENU-ACTIVE-LINK-color);
+}
+#sidebar ul li.active > a {
+    background: var(--MENU-ACTIVE-BACK-color);
+    color: var(--MENU-ACTIVE-LINK-color) !important;
+}
+#sidebar ul li .category-icon {
+	color: var(--MENU-LINK-color);
+}
+#sidebar #shortcuts h3 {
+    color: var(--SIDE-MAIN-TXT-color);
+}
+
+.footline {
+	border-color: var(--SIDE-FOCUS-BACK-color);
+}
+
+

@@ -4,14 +4,11 @@ author: the_zeng
 ---
 
 ## はじめに
-このブログではHugoのテーマ「Learn」を使っています．
+このブログではHugoのテーマ「DocDock」をベースにしています．
 
-ブログではあまり見かけないですが，ドキュメントでは親しんだ感じです．
+最初はLearnを使っていましたが，サイドバーの下層への移動がスムーズでなかったのでこちらにしました．
 
-Hugoのドキュメントで使ってるのはどのtheme?
-githubからみれる
-gohugoiotheme
-ダウンロードして使うようではなさそう．
+
 
 ### テーマを選ぶうえで気にしたこと
 - 日本語の表示がそこそこきれい
@@ -20,16 +17,6 @@ gohugoiotheme
 - codeを表示してくれる
 
 辺りです．
-
-不満点としては，
-- メニューの下層に移動するのが少し不自然（ページ移動ではなく，アコーディオン式に下層メニューが表示されてほしい．）
-static/css/theme.css中の
-```
--#sidebar ul.topics li.parent ul, #sidebar ul.topics > li.active ul { +#sidebar ul.topics li.parent > ul {
-```
-をすることで下層メニューの表示が少し整理される．
-
-- 日本語に比べて英語の文字が細い．
 
 
 ### 設定する場所
@@ -50,6 +37,9 @@ authorをファイル作成した人のgithubアカウントを自動的につ�
 
 #### アイコンの設定
 layouts/partials/logo.htmlでメニューバー上のロゴを設定しています．
+
+layouts/partials/header.htmlをいじり，さきほどのlogo.htmlが参照されるようにしています．
+
 SVGが軽いのでInkscapeでつくりました．
 
 #### トップページ
@@ -57,11 +47,29 @@ SVGが軽いのでInkscapeでつくりました．
 これはlayouts/index.htmlが表示された結果です．
 staticの中にindex.htmlをつくればそれが動くようです．
 
-```
-{{.Site.Home.Content}}
-```
 要するにcontentディレクトリ（.Site.Home）に何かmarkdownファイルがあればそれが読み込まれます．
 _index.mdをつくればそれが表示されます．
+
+#### Code ハイライトの改善
+デフォルトだと変な枠が出てきてうっとうしいです．
+
+Hugoの機能でChromaというものを使ってCodeをハイライトしてくれます．
+
+
+```toml
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+```
+
+をconfig.tomlに書き込んだうえで，
+
+- style.cssを作成
+- head.htmlで読み込む
+
+ことによってactivateされました．
+使うときは
+"```python"のように言語の名前をつけて使います．
+
 
 
 #### faviconの設定
@@ -71,8 +79,9 @@ _index.mdをつくればそれが表示されます．
 /static/images/favicon.pngが読み込まれる設定になっているのでロゴをこのファイル名にすればOKです．
 
 #### menuバー下方への広告掲載
-現在は写真で代替していますが，いずれは広告でも貼ろうかと考えています．
+いずれは広告でも貼ろうかと考えています．
 layouts/partials/menu-footer.htmlを編集すればよいです．
+
 
 ### ページの階層構造
 記事に入れるメタデータは"title"だけにします．
@@ -83,7 +92,7 @@ title: テーマの設定
 ```
 のように，メタデータはYAMLという方式でいれていきます．
 
-このmarkdownファイル群がページの基礎となりますが，Learnテーマでは各階層に説明ページをつけることができます．
+このmarkdownファイル群がページの基礎となりますが，Learn，DocDockでは各階層に説明ページをつけることができます．
 
 説明ページは_index.mdという名前にします．これはテーマ独自のものであり汎用性はありませんが，書き込むことはそれほど多くないのでつくっておくのがいいかと思います．
 
@@ -93,18 +102,40 @@ title: テーマの設定
 
 他にも全体からすぐに参照できるimageフォルダに入れておくのも手ですが，膨らみすぎるとめんどうになりそうです．
 
+
+
+#### 色などの変更
+static/them-original/variant-blue.css
+のようになっていて，optionによってどこが読み込まれるかが変わります．
+
+/layouts/original/head.html
+で諸々を読み込んでいます．
+
+```html
+<link href="{{"theme-original/style.css" | relURL}}" rel="stylesheet">
+{{with .Site.Params.themeVariant}}
+  <link href="{{(printf "theme-original/variant-%s.css" .) | relURL}}" rel="stylesheet">
+{{end}}
+```
+のようにスイッチさせているようです．
+
+custom-head.htmlから自作のvariant-zen.cssみたいなのを読み込めば設定が上書きされるので色を自由に操れます．
+
+ただ，メニューバーで選択したときに白くなりますがこの色は別の場所で定義されているようでvariant.cssを上書きするだけでは変えられませんでした．
+
+
+
 ## To Do
 - 記事のリコメンド機能
 (upとdownをつけたい)
+
 - ポイント順に表示する機能
 
 http://klutche.org/archives/1741/
 ここら辺が参考になりそう．
 Ajaxを使う．
 
-- menu下部に表示されるリンク等を消す．
 
-- アイコンがLocalだとうまく設定されるがnetlifyだとデフォルトにもどってしまう．
-（おそらくリンクがうまくできていない）
+- parmalinkの設定
 
 
