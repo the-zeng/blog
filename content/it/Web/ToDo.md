@@ -31,7 +31,33 @@ Homepage > Information technology
 layouts/partials/body-beforecontent.htmlで設定されているようです．
 
 topbarに含まれるので，
+```css
+#top-bar {
+  position: fixed; /*add to fix top bar*/
+  z-index: 100;
+  background: #f7f7f7;
+  border-radius: 2px;
+  margin: 0rem -1rem 2rem;
+  padding: 0 1rem;
+  height: 0;
+  min-height: 3rem; }
+```
+とfixedにしてあげればよいです．
+コードハイライトと重なったときに，コードが前面にきてしまったので，z-indexも大きく設定しています．
 
+相場を知らないので100にしました．
+
+ただ，このままではページがよけてくれないので，全体をしたに下げる必要がでてきます．
+body全体を下げるとtop-barまでさがってしまうので，文章部分だけを下げます．
+デベロッパーツールなどを使い，文章部分のidがbody-innerだと見つけます．
+
+```css
+#body-inner {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+```
+
+これで下がりました．
 
 ## h1 h2 タグなどのデザインの変更
 /static/scss/original/main.scss
