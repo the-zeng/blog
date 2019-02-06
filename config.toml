@@ -1,11 +1,11 @@
-baseURL = "/"
+baseURL = "https://thezenglog.netlify.com/"
 
 languageCode = "ja"
 DefaultContentLanguage = "ja"
 title = "The zeng log"
 theme = "hugo-theme-docdock"
 #themesdir = "../.."
-
+metaDataFormat = "yaml"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
@@ -31,3 +31,8 @@ highlightClientSide = false
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
+[taxonomies]
+#author = "authors"
+
+[permalinks]
+content = "/:filename/"
