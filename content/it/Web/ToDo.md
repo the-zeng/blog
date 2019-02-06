@@ -35,6 +35,9 @@ topbarに含まれるので，
 #top-bar {
   position: fixed; /*add to fix top bar*/
   z-index: 100;
+  width: 60%;
+  min-width: 300px;
+
   background: #f7f7f7;
   border-radius: 2px;
   margin: 0rem -1rem 2rem;
@@ -46,6 +49,20 @@ topbarに含まれるので，
 コードハイライトと重なったときに，コードが前面にきてしまったので，z-indexも大きく設定しています．
 
 相場を知らないので100にしました．
+
+widthも設定しておきたいのですが，メニューバーを含めた幅を基準に%が決まってしまいます．
+よって，メニューバーが出てきた状態と出てない状態で場合わけしたいので，出てきていない状態（画面幅で出るか出ないか制御している）では下記のようにwidthを上書きします．
+
+```css
+  @media only all and (max-width: 47.938em) {
+    #top-bar {
+      width:90%;
+    }
+  }
+```
+
+
+
 
 ただ，このままではページがよけてくれないので，全体をしたに下げる必要がでてきます．
 body全体を下げるとtop-barまでさがってしまうので，文章部分だけを下げます．
