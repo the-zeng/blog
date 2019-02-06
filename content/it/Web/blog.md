@@ -26,11 +26,6 @@ title: Hugoテーマの設定
 themesdir = "../.."
 をコメントアウトすればよいです．
 
-各記事のパーマリンクは，サイト構造を変えるときの影響を減らしたいのと英語にしたいので
-/:author/:filename/
-にします．
-（To Do: うまく変更されない）
-
 To Do:
 authorをファイル作成した人のgithubアカウントを自動的につけたい．
 
@@ -84,7 +79,7 @@ layouts/partials/menu-footer.htmlを編集すればよいです．
 
 ## ページの階層構造
 記事に入れるメタデータは"title"だけにします．
-```
+```yaml
 ---
 title: テーマの設定
 ---
@@ -158,7 +153,7 @@ baseURL/Todo
 とできました．
 
 ### *追記: フォルダー名について
-permalinkに設定するフォルダー名に小文字が入っていると私の環境ではうまく設定してくれませんでした．
+permalinkに設定するフォルダー名に大文字が入っていると私の環境ではうまく設定してくれませんでした．
 
 フォルダー名は少しかっこ悪いですが小文字onlyにするのがよさそうですね．
 
@@ -168,16 +163,55 @@ content/category/ITにするのが階層増えていやなのでcontent/ITにし
 
 ちなみにこうすると大カテゴリーごとにpermalinkを設定する必要がありますがまぁ一生でつくる大カテゴリーはせいぜい10個程度だと思うのでがまんします．
 
-## To Do
-- 記事のリコメンド機能
-(upとdownをつけたい)
+## navigation markがついてくるように
+Homepage > Information technology
+みたいなやつをbreadcrumb（bootstrapの一つ）というらしいです．
+layouts/partials/body-beforecontent.htmlで設定されているようです．
 
-- ポイント順に表示する機能
+topbarに含まれるので，
+```css
+#top-bar {
+  position: fixed; /*add to fix top bar*/
+  z-index: 100;
+  width: 60%;
+  min-width: 300px;
 
-http://klutche.org/archives/1741/
-ここら辺が参考になりそう．
-Ajaxを使う．
+  background: #f7f7f7;
+  border-radius: 2px;
+  margin: 0rem -1rem 2rem;
+  padding: 0 1rem;
+  height: 0;
+  min-height: 3rem; }
+```
+とfixedにしてあげればよいです．
+コードハイライトと重なったときに，コードが前面にきてしまったので，z-indexも大きく設定しています．
 
+相場を知らないので100にしました．
+
+widthも設定しておきたいのですが，メニューバーを含めた幅を基準に%が決まってしまいます．
+よって，メニューバーが出てきた状態と出てない状態で場合わけしたいので，出てきていない状態（画面幅で出るか出ないか制御している）では下記のようにwidthを上書きします．
+
+```css
+  @media only all and (max-width: 47.938em) {
+    #top-bar {
+      width:90%;
+    }
+  }
+```
+
+
+
+ただ，このままではページがよけてくれないので，全体をしたに下げる必要がでてきます．
+body全体を下げるとtop-barまでさがってしまうので，文章部分だけを下げます．
+デベロッパーツールなどを使い，文章部分のidがbody-innerだと見つけます．
+
+```css
+#body-inner {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+```
+
+これで下がりました．
 
 
 

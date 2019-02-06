@@ -1,6 +1,6 @@
 ---
 title: To Do　List
-url: /ToDo
+weight: 1
 ---
 
 変更したい点をメモとして残しています．
@@ -14,71 +14,36 @@ http://klutche.org/archives/1741/
 ここら辺が参考になりそう．
 Ajaxを使う．
 
+静的サイトだとどうしてもページへの動作（書き込み，クリック）などによってページへ影響を与えることが難しいです．
+ですので，たとえばコメント欄をつくるにも外部サービスを使わなければいけないようです．
+
+サイトのコンセプト的に使う外部サービスはgithubだけにしたいところです．
+
+コメント欄についてはutterancesというgithubのissuesをそのまま用いてしまうサービスがあり，個人開発ですがコンセプトはかなり良い気がします．
+
+何かgithubを用いて投票を保存する方法があればいいのですが．
+
+イメージとしては「各記事に対して強制的にissueを立ち上げ，そこへのレスポンスを取得する」みたいなのがいいかなと思っています．
+
+issueはレポジトリ単位なのでファイルがつくられたcommitに対してコメントを作成する形がいいかも．
+
+記事は全てmergeコミットの形であげていくのも手．
+Squash and mergeを選べば，あまり見せる必要もない記事の編集過程を隠せ，authorもはっきりする．
+
+mergeコミットへのコメントをコメント欄に表示する形？
+
 - h3,h4タグそれぞれのデザインの変更
 下線がつくやつとかボックスタイプが欲しい．
 Qiitaに合わせたい．
 
 - Netlifyに独自ドメインを設定
 
-- サイドメニューをもう少し広くする
 
-- スマホでnavigationマークがついてくるようにしたい
-
-
-## navigation markがついてくるように
-Homepage > Information technology
-みたいなやつをbreadcrumb（bootstrapの一つ）というらしいです．
-layouts/partials/body-beforecontent.htmlで設定されているようです．
-
-topbarに含まれるので，
-```css
-#top-bar {
-  position: fixed; /*add to fix top bar*/
-  z-index: 100;
-  width: 60%;
-  min-width: 300px;
-
-  background: #f7f7f7;
-  border-radius: 2px;
-  margin: 0rem -1rem 2rem;
-  padding: 0 1rem;
-  height: 0;
-  min-height: 3rem; }
-```
-とfixedにしてあげればよいです．
-コードハイライトと重なったときに，コードが前面にきてしまったので，z-indexも大きく設定しています．
-
-相場を知らないので100にしました．
-
-widthも設定しておきたいのですが，メニューバーを含めた幅を基準に%が決まってしまいます．
-よって，メニューバーが出てきた状態と出てない状態で場合わけしたいので，出てきていない状態（画面幅で出るか出ないか制御している）では下記のようにwidthを上書きします．
-
-```css
-  @media only all and (max-width: 47.938em) {
-    #top-bar {
-      width:90%;
-    }
-  }
-```
-
-
-
-
-ただ，このままではページがよけてくれないので，全体をしたに下げる必要がでてきます．
-body全体を下げるとtop-barまでさがってしまうので，文章部分だけを下げます．
-デベロッパーツールなどを使い，文章部分のidがbody-innerだと見つけます．
-
-```css
-#body-inner {
-  margin-top: 5rem;
-  margin-bottom: 5rem; }
-```
-
-これで下がりました．
 
 ## h1 h2 タグなどのデザインの変更
 /static/scss/original/main.scss
 で設定されているようです．
+→最終的にはstyle.cssなど．
 
 flexの場合は
 /static/scss/flex/article.scssかな
@@ -129,8 +94,6 @@ ulやliが何をさす？
 
 →スマホ画面でうまくいかなかった．
 
-ボックスは
-nucleus.cssのなかのbox-sizingで定義されているのかな．
-box-sizingは関係なさそう．
+
 
 
