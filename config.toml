@@ -37,3 +37,6 @@ author = "author"
 [permalinks]
 #content = "/:filename/"
 categories = "/:filename/"
+it = "/:filename/"
+InformationTechnology = "/:filename/"
+physics = "/:filename"

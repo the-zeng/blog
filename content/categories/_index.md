@@ -1,6 +1,0 @@
----
-title: Categories
----
-
-# Top Page
-
