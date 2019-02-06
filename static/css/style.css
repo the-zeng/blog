@@ -1372,7 +1372,7 @@ pre .copy-to-clipboard:hover {
     left: 0; }
 
   .sidebar-hidden #body {
-    margin-left: 230px;
+    margin-left: 270px; /* changed from 230px*/
     overflow: hidden; }
 
   .sidebar-hidden #overlay {

@@ -75,6 +75,8 @@ ulやliが何をさす？
     left: -270px; }/* changed from 230px*/
 ```
 
+→スマホ画面でうまくいかなかった．
+
 ボックスは
 nucleus.cssのなかのbox-sizingで定義されているのかな．
 box-sizingは関係なさそう．
