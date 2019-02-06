@@ -24,6 +24,15 @@ Qiitaに合わせたい．
 
 - スマホでnavigationマークがついてくるようにしたい
 
+
+## navigation markがついてくるように
+Homepage > Information technology
+みたいなやつをbreadcrumb（bootstrapの一つ）というらしいです．
+layouts/partials/body-beforecontent.htmlで設定されているようです．
+
+topbarに含まれるので，
+
+
 ## h1 h2 タグなどのデザインの変更
 /static/scss/original/main.scss
 で設定されているようです．

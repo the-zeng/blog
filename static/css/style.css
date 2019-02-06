@@ -1013,6 +1013,7 @@ td {
   background: #34495E; }
 
 #top-bar {
+  position: fixed; /*add to fix top bar*/
   background: #f7f7f7;
   border-radius: 2px;
   margin: 0rem -1rem 2rem;
