@@ -32,7 +32,8 @@ highlightClientSide = false
 home = [ "HTML", "RSS", "JSON"]
 
 [taxonomies]
-#author = "authors"
+author = "author"
 
 [permalinks]
-content = "/:filename/"
+#content = "/:filename/"
+categories = "/:filename/"

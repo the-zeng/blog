@@ -1,7 +1,6 @@
 ---
-title: Top page of Content
+title: Home Page
 ---
 
-## プロフィール
-the_zengです．
+# Home Page
 
