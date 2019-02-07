@@ -92,6 +92,8 @@ sccsを変更→stylecssをコンパイル
 ブラウザーのsource map featureで中身が分かるらしいです．
 
 ulやliが何をさす？
+箇条書きの要素．
+un ordered labelだっけ．
 
 デベロッパーツールでどこが該当するかを調べていきます．
 サイドバーの大きさはstyle.cssで書かれています．
