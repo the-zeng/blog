@@ -1,5 +1,6 @@
 ---
 title: Hugoテーマの設定
+draft: true
 ---
 
 ## はじめに
