@@ -45,7 +45,10 @@ git checkout master
 で古くなったbranchを抜け出します．
 
 ## git fetchの役割
-データをとってきて，gitにorigin/masterの現状を報告するようなものです．
+データをとってきて，gitにorigin(リモート)masterの現状を報告するようなものです．
+→この状態はどこで確認できる？
+localにorigin/masterというbranchがつくられるらしいです．
+特殊なbranchなのでgit branchなどでみることはできません．
 
 これにおいつくには
 master(local)が追いつくにはここから
