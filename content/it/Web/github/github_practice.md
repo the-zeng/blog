@@ -92,5 +92,39 @@ forkボタンがグレーアウトしています．
 ## 未完成のものを1部分だけpull requestすることはできるか？
 
 ## localにはどのブランチの情報が保存される？
+git clone -b ${branch name} ${url}
+で選ぶことができます．
+
 
 ## git add, git commitしないままbranchを移動したときの扱い
+gitに管理されないので作業ディレクトリに残ります．
+
+
+## git checkout
+`git checkout`をうまく使えばいけるらしいです．
+
+```sh
+git checkout ${branchname} -- ${path_to_file}
+```
+で対象branchの対象fileが現在のbranchにコピーされるというのです．
+
+git checkoutはbranchの移動に使うコマンドであり，いまいるbranchの情報を変更するのはちょっと違和感を感じてしまいます．
+
+git checkoutの使いかたをもう１つみてみます．
+
+```sh
+git checkout -- ${path_to_file}
+```
+これは，対象ファイルを最後のcommitの状態まで戻すという操作です．
+ちなみに--をつけるのはfile名であることを明示的に指定するためらしいです．
+
+この3つの使用例からなんとなく「HEADを移動させる」というgit checkoutの性格が掴めてきます．
+
+HEADというのは現在目に見える状態です．
+VScodeを開いていたら，表示されているフォルダ，ファイルです．
+
+checkoutでファイルを指定するのは
+「HEAD（すなわち現在いる場所）にファイルをコピーしてくる」という操作に相当します．
+
+branchを変えずにcheckoutするというのは，少しトリッキーですが，
+「完成した部分からプルリクをする」というワークフローが可能になります．
