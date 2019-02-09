@@ -1,5 +1,6 @@
 ---
 title: github練習
+draft: true
 ---
 
 git, githubについて，以下のことがスラスラとできるようになりたいです．
@@ -80,5 +81,12 @@ merge: とりあえず自分のcommitありき．masterを追加していき，�
 git reset --hard ID
 
 ## 自分のレポジトリをforkする方法
-普通のforkだと同じレポジトリ名になるのでたぶん無理です．
+githubでは基本的に自分のレポジトリをforkするということはできません．
+forkボタンがグレーアウトしています．
+
 レポジトリに対してimport codeでimportするという方法があります．
+
+## 未完成のものを1部分だけpull requestすることはできるか？
+
+## localにはどのブランチの情報が保存される？
+
