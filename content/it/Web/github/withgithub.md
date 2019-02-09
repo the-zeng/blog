@@ -1,5 +1,6 @@
 ---
 title: Use Hugo with github
+draft: true
 ---
 
 markdownファイルにtitle以外の情報を書き込むのは面倒くさいですし，移植性が低くなりなんか嫌です．
