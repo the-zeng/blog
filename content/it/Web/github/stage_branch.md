@@ -1,5 +1,5 @@
 ---
-title: "stage" branch method 
+title: "stage branch method"
 ---
 
 ## 概要
