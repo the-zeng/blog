@@ -7,8 +7,8 @@
     --SIDE-FOCUS-BACK-color:black;
     --SIDE-FOCUS-FORE-color:#397dfb;
     --MENU-LINK-color:#7caaff;
-    --MENU-ACTIVE-BACK-color:#397dfb;
-    --MENU-ACTIVE-LINK-color:black;
+    --MENU-ACTIVE-BACK-color:#0b0c0c;
+    --MENU-ACTIVE-LINK-color:rgb(255, 255, 255);
     
 }
 a, #sidebar ul li.visited > a .read-icon {
@@ -48,6 +48,21 @@ a:hover {
     background: var(--MENU-ACTIVE-BACK-color);
     color: var(--MENU-ACTIVE-LINK-color) !important;
 }
+
+#sidebar ul li.active > div > a {
+    background:var(--MENU-ACTIVE-BACK-color);
+    color: var(--MENU-ACTIVE-LINK-color) !important;
+    padding-left: 1rem;
+    padding-right: 0rem; }
+
+#sidebar ul li.active > div > a:hover {
+    color: var(--MENU-ACTIVE-LINK-color) !important;
+    -webkit-transition: color 0.15s ease;
+    -moz-transition: color 0.15s ease;
+    -ms-transition: color 0.15s ease;
+    transition: color 0.15s ease; }
+
+
 #sidebar ul li .category-icon {
 	color: var(--MENU-LINK-color);
 }
