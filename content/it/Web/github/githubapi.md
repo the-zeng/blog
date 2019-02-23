@@ -21,3 +21,19 @@ layouts/partials/original/body_beforecontents.htmlに
 ```
 を追加．
 最終的にここにgithubから取り出したauthor情報が入ってくることを目指します．
+
+https://pandanote.info/?p=3389
+アクセス制限があるため，一度自サーバーに内容をキャッシュしている．
+
+前提
+- 何回もアクセスするのは筋が悪い
+- 静的サイトゆえサーバーでいろいろするのは難しい
+
+最終構想
+- 執筆者情報やgithub関連の情報を蓄えておくファイルを作成（古典的データベース）
+- blogのbuild前にファイルをいじるプログラムが走る．
+- それぞれのページはファイルから情報を持ってくる．（ここにgithubapi使う）
+
+静的サイトでがんばる話
+https://www.altus5.co.jp/blog/static-site/2016/12/18/static-site-free-plan/
+
