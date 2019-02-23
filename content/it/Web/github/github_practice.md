@@ -58,6 +58,18 @@ master(local)が追いつくにはここから
 
 `git pull`でまとめて行えます．
 
+## Branchの扱い
+状況：remoteのbranchをlocalにもってきたい
+
+まず，remoteにどのようなbranchがあるかを取得します．
+これは`git fetch`によって行うことができます．
+
+このときorigin/master, origin/{branchname}という仮想的なbranchがつくられます．
+
+`git branch -a`によって仮想的なbranchも含めて確認でき，
+`git checkout -b {branchname}` origin/{branchname}
+で仮想的なbranchをいつも通りのbranchとしてコピーできます．
+
 
 ## rebase mergeの違い
 
