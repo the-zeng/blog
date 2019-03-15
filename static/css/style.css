@@ -1125,11 +1125,11 @@ pre .copy-to-clipboard:hover {
   width: 100%;
   z-index: 50000;
   display: table-cell;
+  text-align: left;
   vertical-align: middle;
 }
 #logo-place{
   margin-top: 5px;
-  float: right;
 }
 
 #searchResults {
