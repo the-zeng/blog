@@ -1132,6 +1132,7 @@ pre .copy-to-clipboard:hover {
   text-align: left; }
 
 #sidebar-toggle-span {
+    left: 5px;
   display: none; }
 
 #sidebar-toggle-span {
