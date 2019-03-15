@@ -1117,8 +1117,10 @@ pre .copy-to-clipboard:hover {
 
 
 #headermain{
-  background-color: red;
-  height: 10px;
+  position: fixed;
+  top: 0px;
+  background-color:#2053AB;
+  height: 50px;
 }
 
 #searchResults {
@@ -1135,7 +1137,7 @@ pre .copy-to-clipboard:hover {
 #sidebar {
   background-color: #2053AB;
   position: fixed;
-  top: 10px;
+  top: 50px;
   width: 300px;
   bottom: 0;
   left: 0;
