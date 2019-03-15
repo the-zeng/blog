@@ -1132,7 +1132,7 @@ pre .copy-to-clipboard:hover {
   height: 45px;
   margin-top: 5px;
   vertical-align: middle;
-  text-align: left;
+  margin-left: 300px;
 }
 
 #searchResults {
