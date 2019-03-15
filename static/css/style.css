@@ -1115,6 +1115,25 @@ pre .copy-to-clipboard:hover {
 .mermaid .section {
   opacity: 0.2; }
 
+
+#headermain{
+  position: fixed;
+  top: 0px;
+  background-color:white;
+  height: 50px;
+  border-bottom: 1px solid rgb(163, 163, 163) ;
+  width: 100%;
+  z-index: 50000;
+  text-align: left;
+  
+}
+#logo-place{
+  display: inline-block;
+  height: 45px;
+  margin-top: 5px;
+  vertical-align: middle;
+}
+
 #searchResults {
   text-align: left; }
 
@@ -1129,7 +1148,7 @@ pre .copy-to-clipboard:hover {
 #sidebar {
   background-color: #2053AB;
   position: fixed;
-  top: 0;
+  top: 50px;
   width: 300px;
   bottom: 0;
   left: 0;
@@ -1330,7 +1349,9 @@ pre .copy-to-clipboard:hover {
     font-size: 2rem; } }
 @media only all and (max-width: 47.938em) {
   #sidebar-toggle-span {
-    display: inline; } }
+    display: inline;
+    margin-left: 10px;
+ } }
 @media only all and (max-width: 59.938em) {
   #body .padding {
     position: static;
@@ -1380,6 +1401,10 @@ pre .copy-to-clipboard:hover {
   #body {
     margin-left: 0;
     width: 100%; }
+
+  #logo-place{
+        margin-left: 0px;
+      }
 
   .sidebar-hidden {
     overflow: hidden; }
