@@ -1349,7 +1349,7 @@ pre .copy-to-clipboard:hover {
     font-size: 2rem; } }
 @media only all and (max-width: 47.938em) {
   #sidebar-toggle-span {
-    display: inline;
+    display: inline-block;
     margin-left: 10px;
  } }
 @media only all and (max-width: 59.938em) {
