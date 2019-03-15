@@ -1119,8 +1119,9 @@ pre .copy-to-clipboard:hover {
 #headermain{
   position: fixed;
   top: 0px;
-  background-color:#397dfb;
+  background-color:white;
   height: 50px;
+  border-bottom: 1px solid rgb(163, 163, 163) ;
   width: 100%;
   z-index: 50000;
 }
