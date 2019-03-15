@@ -1121,6 +1121,8 @@ pre .copy-to-clipboard:hover {
   top: 0px;
   background-color:#2053AB;
   height: 50px;
+  width: 100%;
+  z-index: 50000;
 }
 
 #searchResults {
