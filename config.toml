@@ -24,7 +24,7 @@ themeStyle = "original"
 themeVariant = "gray"
 showVisitedLinks = false
 #disableHomeIcon = true
-disableSearch = true
+#disableSearch = true
 
 highlightClientSide = false
 
