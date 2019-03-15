@@ -17,13 +17,14 @@
 <nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
 
 <div class="highlightable">
-  <!--
+  
     <div id="header-wrapper">
     
-     
+     <!-- 
     <div id="header">
       {{ partial "header.html" . }}
     </div>
+    -->
     {{- if not .Site.Params.disableSearch}}
         <div class="searchbox">
 		    <label for="search-by"><i class="fa fa-search"></i></label>
@@ -41,8 +42,9 @@
 		</script>
 		<script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
     {{- end}}
+    
   </div>
-  -->
+  
 
       <ul class="topics">
         {{- if not .Site.Params.disableHomeIcon}}
@@ -78,7 +80,7 @@
  <section id="footer">
       {{- partial "menu-footer.html" . }}
     </section>
-  </div>
+</div>
 </nav>
 
 
