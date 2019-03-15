@@ -1121,7 +1121,7 @@ pre .copy-to-clipboard:hover {
   top: 0px;
   background-color:white;
   height: 50px;
-  border-bottom: 2px solid rgb(163, 163, 163) ;
+  border-bottom: 1px solid rgb(163, 163, 163) ;
   width: 100%;
   z-index: 50000;
   display: table-cell;
@@ -1132,7 +1132,6 @@ pre .copy-to-clipboard:hover {
   text-align: left; }
 
 #sidebar-toggle-span {
-    left: 5px;
   display: none; }
 
 #sidebar-toggle-span {
@@ -1344,7 +1343,9 @@ pre .copy-to-clipboard:hover {
     font-size: 2rem; } }
 @media only all and (max-width: 47.938em) {
   #sidebar-toggle-span {
-    display: inline; } }
+    display: inline;
+    margin-left: 10px;
+ } }
 @media only all and (max-width: 59.938em) {
   #body .padding {
     position: static;
