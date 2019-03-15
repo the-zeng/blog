@@ -1133,8 +1133,8 @@ pre .copy-to-clipboard:hover {
 
 #sidebar {
   background-color: #2053AB;
-  position: fixed;
-  top: 1000px;
+  position: relative;
+  top: 0px;
   width: 300px;
   bottom: 0;
   left: 0;
