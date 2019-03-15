@@ -72,3 +72,24 @@ git log -- ${file to path}でcommit一覧が取り出せるため，最初のcom
 https://int128.hatenablog.com/entry/2014/11/24/152105
 
 に用例がのっている．
+
+## fileの追跡
+https://qiita.com/yukimura1227/items/fbb076db61a2e43a32e3
+を参考にしました．
+
+git mvでfileのディレクトリ変更をしていれば，
+
+```sh
+git log --follow ${new file name}
+```
+と--follow オプションをつけることで昔のcommit（fileをつくったときのcommit）からcommit履歴を辿れるらしいです．
+
+git mvと他の修正を同時に行うとうまくできないことがあるらしいので，移動させたりファイル名を変更した場合は都度git commitをするのがよさそうです．
+
+## apiをjavascriptで流すには？
+
+https://qiita.com/Saayaman/items/5857859709b677e4da15
+http://sekai.hateblo.jp/entry/2013/08/30/010246
+
+https://int128.hatenablog.com/entry/2014/11/24/152105
+ここらへんが使えるかな．
