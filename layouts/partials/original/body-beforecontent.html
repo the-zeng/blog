@@ -1,12 +1,16 @@
 <header>
     <div id="headermain">
-        <p>testaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
         <span id="sidebar-toggle-span">
                 <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
                   <i class="fa fa-bars"></i>
                 </a>
-              </span>
-              <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+
+        <div class="logo">
+                {{ partial "header.html" . }}
+        </div>
+
     </div>
 </header>
 
@@ -78,6 +82,8 @@
 <section id="body">
 <div id="overlay"></div>
 <div class="padding highlightable">
+
+<!-- 
 {{if not .IsHome}}
   <div id="top-bar">
     {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
@@ -94,16 +100,18 @@
     {{- end -}}
 
     
-    <!-- TOC -->
+   
     <div class="progress">
         <div class="wrapper">
     {{ .TableOfContents }}
         </div>
     </div>
-    <!-- /TOC -->
+    
 
   </div>
 {{end}}
+-->
+
 {{if .Params.tags }}
   <div id="tags">
     {{ range $index, $tag := .Params.tags }}
