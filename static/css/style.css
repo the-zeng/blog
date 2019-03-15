@@ -376,6 +376,10 @@ b, strong, label, th {
   -ms-transition: all 0.35s ease;
   transition: all 0.35s ease; }
 
+#headermain{
+    background: #238fbd;
+}
+
 #grav-logo {
   max-width: 60%; }
 
@@ -932,7 +936,8 @@ td {
 .highlightable {
   padding: 0rem 0 0rem;
   overflow: auto;
-  position: relative;
+  position: absolute;
+  /*position: relative;*/
   height: 100%; }
 
 .lightbox-active #body {
@@ -1016,15 +1021,15 @@ td {
 #top-bar {
   position: fixed; /*add to fix top bar*/
   z-index: 100;
-  width: 60%;
+  width: 100%;
   min-width: 300px;
-  box-sizing: border-box;
+  /*box-sizing: border-box; */
 
   text-overflow: ellipsis;
-  background: #f7f7f7;
-  border-radius: 2px;
-  margin: 0rem -1rem 2rem;
-  padding: 0 1rem;
+  background: #f50c0c;
+  /*border-radius: 2px; */
+  margin: 0rem;
+  padding: 0 0rem;
   height: 0;
   min-height: 3rem; }
 
@@ -1129,7 +1134,7 @@ pre .copy-to-clipboard:hover {
 #sidebar {
   background-color: #2053AB;
   position: fixed;
-  top: 0;
+  top: 1000px;
   width: 300px;
   bottom: 0;
   left: 0;
@@ -1210,9 +1215,11 @@ pre .copy-to-clipboard:hover {
     #sidebar ul.topics li.parent > ul, #sidebar ul.topics li.alwaysopen > ul,
     #sidebar ul li.active > ul {
       display: block; }
+      /*
     #sidebar ul.topics > li > span > a {
-            /*line-height: 2rem;
-		    font-size: 1.1rem*/ }
+            line-height: 2rem; 
+            font-size: 1.1rem }
+            */
     #sidebar ul.topics > li > span > a b {
       opacity: 0.5;
       font-weight: normal; }
