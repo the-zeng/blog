@@ -24,7 +24,7 @@
     <div id="header">
       {{ partial "header.html" . }}
     </div>
-    -->
+    
     {{- if not .Site.Params.disableSearch}}
         <div class="searchbox">
 		    <label for="search-by"><i class="fa fa-search"></i></label>
@@ -42,6 +42,7 @@
 		</script>
 		<script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
     {{- end}}
+    -->
     
   </div>
   
