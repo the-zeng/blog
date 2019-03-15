@@ -1130,6 +1130,7 @@ pre .copy-to-clipboard:hover {
 #logo-place{
   display: inline-block;
   height: 45px;
+  width: 250px;
   margin-top: 5px;
   vertical-align: middle;
 }
