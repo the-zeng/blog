@@ -1127,6 +1127,10 @@ pre .copy-to-clipboard:hover {
   display: table-cell;
   vertical-align: middle;
 }
+#logo-place{
+  margin-top: 5px;
+  float: right;
+}
 
 #searchResults {
   text-align: left; }
