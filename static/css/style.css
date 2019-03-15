@@ -1403,6 +1403,10 @@ pre .copy-to-clipboard:hover {
     margin-left: 0;
     width: 100%; }
 
+  #logo-place{
+        margin-left: 0px;
+      }
+
   .sidebar-hidden {
     overflow: hidden; }
 
