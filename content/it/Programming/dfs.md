@@ -12,7 +12,41 @@ BFSは最短経路問題とも関連してきます．
 
 BFSはダイクストラ法の特殊な状況（辺の重みがすべて1）とも捉えることができる？
 
+# ダイクストラ
+
 # BFS
+抽象的なプログラム
+priority_queにidを保存させた構造を突っ込めるか？
+sortと同じように比較関数を指定してあげればよい．
+参考https://www.albow.net/entry/pqmycls
+
+```cpp
+struct IdCost{
+    int id
+    int cost
+}
+
+// 比較演算子のオーバーロード
+bool operator< (const IdCost &idcost1, const IdCost &idcost2){
+    return student1.Cost < student2.Cost;
+};
+
+```
+
+```cpp
+void dijkstra(int start){ // vertex.id
+    // initialize vertex level(cost)
+    REP(i,N){
+        vertex.cost = -1;
+    }
+    V[start].cost = 0;
+
+    que.push()
+}
+
+```
+
+
 
 ```cpp
 void bfs(int s){
